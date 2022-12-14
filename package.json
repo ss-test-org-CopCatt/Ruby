@@ -46,7 +46,6 @@
     "apollo-link-error": "1.1.13",
     "apollo-link-http": "1.5.17",
     "babel-eslint": "10.1.0",
-    "babel-jest": "26.3.0",
     "babel-loader": "8.0.5",
     "babel-plugin-dynamic-import-node": "2.2.0",
     "bunyan": "^1.8.12",
