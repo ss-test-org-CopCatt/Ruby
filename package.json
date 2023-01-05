@@ -11,7 +11,6 @@
     "lint:ci": "yarn lint --quiet --format junit -o reports/junit/js-lint-results.xml",
     "build": "yarn clean && webpack --bail",
     "build:watch": "yarn clean && webpack --watch --progress",
-    "build:fragmentTypes": "cd maharo && node fragment-types-builder.js",
     "start": "yarn clean && webpack-dev-server --config webpack.hot.config.js --progress",
     "clean:ssr": "rm -rf build",
     "build:ssr": "webpack --config webpack.ssr.config.js",
@@ -19,11 +18,8 @@
     "wait:ssr": "mkdir build && cp wait.js build/server.js",
     "nodemon:ssr": "nodemon bin/ssr.js --watch ./build | bunyan",
     "ssr:dev": "yarn clean:ssr && yarn wait:ssr && npm-run-all --parallel watch:ssr nodemon:ssr",
-    "ssr:prod": "node bin/ssr.js",
     "docker:build": "docker build -t ssr-local .",
     "docker:run": "docker run --env GRAPHQL_URL=http://docker.for.mac.localhost:5000/graphql -p 5001:5001 ssr-local",
-    "upload-bundles": "node bin/upload-bundles.js out/manifest.json",
-    "release-bundles": "node bin/release-bundles.js out/manifest.json"
   },
   "dependencies": {
     "@babel/core": "7.11.0",
@@ -44,7 +40,7 @@
     "@hot-loader/react-dom": "16.13.0",
     "@loadable/component": "^5.13.1",
     "@sentry/browser": "^5.15.4",
-    "@sentry/node": "^5.15.5",
+
  
     "apollo-cache-inmemory": "1.6.6",
     "apollo-client": "2.6.10",
@@ -55,7 +51,7 @@
     "babel-eslint": "10.1.0",
     "babel-jest": "26.3.0",
     "babel-loader": "8.0.5",
-    "babel-plugin-dynamic-import-node": "2.2.0",
+
     "babel-plugin-inline-react-svg": "^1.1.1",
     "bunyan": "^1.8.12",
     "clipboard-polyfill": "2.7.0",
