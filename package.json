@@ -110,7 +110,7 @@
       "<rootDir>/tests/setup.js"
     ],
     "snapshotSerializers": [
-      "jest-glamor-react",
+  
       "enzyme-to-json/serializer"
     ],
     "moduleNameMapper": {
@@ -123,7 +123,6 @@
     "@babel/plugin-syntax-optional-chaining": "^7.8.3"
   },
   "resolutions": {
-    "babel-plugin-inline-react-svg/svgo/js-yaml": "^3.14.0",
     "draft-js/fbjs/cross-fetch/node-fetch": "^2.6.1",
     "glamor/fbjs/isomorphic-fetch/node-fetch": "^2.6.1",
     "http-server/ecstatic": "4.1.4"
