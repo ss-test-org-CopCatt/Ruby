@@ -5,9 +5,6 @@
   "scripts": {
     "clean": "rm -rf coverage && rm -rf reports && rm -rf out/*",
     "lint": "eslint . --ext .js,.jsx",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:ci": "jest --ci --coverage --runInBand",
     "lint:ci": "yarn lint --quiet --format junit -o reports/junit/js-lint-results.xml",
     "build": "yarn clean && webpack --bail",
     "build:watch": "yarn clean && webpack --watch --progress",
@@ -53,7 +50,6 @@
     "apollo-link-error": "1.1.13",
     "apollo-link-http": "1.5.17",
     "babel-eslint": "10.1.0",
-    "babel-jest": "26.3.0",
     "babel-loader": "8.0.5",
     "babel-plugin-dynamic-import-node": "2.2.0",
     "babel-plugin-inline-react-svg": "^1.1.1",
@@ -84,8 +80,6 @@
     "graphql-tag": "2.10.1",
     "identity-obj-proxy": "3.0.0",
     "imports-loader": "0.8.0",
-    "jest-glamor-react": "4.3.1",
-    "jest-junit": "11.1.0",
     "js-yaml": "^3.14.0",
     "md5-o-matic": "0.1.1",
     "mobx": "3.5.1",
@@ -141,13 +135,10 @@
     "node": "^14.7.0",
     "yarn": "^1.22.4"
   },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "<rootDir>/tests/setup.js"
+
     ],
     "snapshotSerializers": [
-      "jest-glamor-react",
-      "enzyme-to-json/serializer"
+        "enzyme-to-json/serializer"
     ],
     "moduleNameMapper": {
       ".+\\.(svg|css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "<rootDir>/tests/empty-module.js"
