@@ -136,7 +136,7 @@
     "yarn": "^1.22.4"
   },
 
-    ],
+    
     "snapshotSerializers": [
         "enzyme-to-json/serializer"
     ],
