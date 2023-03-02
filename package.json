@@ -102,11 +102,11 @@
     "whatwg-url": "^8.1.0"
   },
   "engines": {
-    "node": "^14.7.0",
+    
     "yarn": "^1.22.4"
   },
       "<rootDir>/tests/setup.js"
-    ],
+    
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
